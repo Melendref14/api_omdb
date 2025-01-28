@@ -1,7 +1,12 @@
 package com.example.backend_omdb.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Movie {
 
+    @Id
     private String imdbID;
     private String title;
     private String year;
