@@ -49,12 +49,17 @@ public class MoviesService {
             List<Movie> movies = new ArrayList<>();
             for (int i = 0; i < moviesArray.length(); i++) {
                 JSONObject movieJson = moviesArray.getJSONObject(i);
-                Movie movie = new Movie();
-                movie.setImdbID(movieJson.getString("imdbID"));
+                String imdbID = movieJson.getString("imdbID");
+
+                // Verificar si la película ya existe en la base de datos
+                Movie movie = movieRepository.findById(imdbID).orElse(new Movie());
+                movie.setImdbID(imdbID);
                 movie.setTitle(movieJson.getString("Title"));
                 movie.setYear(movieJson.getString("Year"));
                 movie.setPoster(movieJson.getString("Poster"));
-                movie.setPersonalRating((int) (Math.random() * 5) + 1); // Valoración personal aleatoria del 1 al 5
+                if (movie.getPersonalRating() == 0) {
+                    movie.setPersonalRating((int) (Math.random() * 5) + 1); // Valoración personal aleatoria del 1 al 5
+                }
                 movies.add(movie);
 
                 // Guardar la película en la base de datos
