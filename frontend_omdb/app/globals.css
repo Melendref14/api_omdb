@@ -3,6 +3,10 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Caption&display=swap');
 
+:root {
+  background-color: #121829;
+}
+
 @layer utilities {
   .custom-bg {
     min-height: 100vh;
