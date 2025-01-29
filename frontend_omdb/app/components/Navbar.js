@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 const Navbar = () => {
+  // Estado local para controlar si el menú está abierto o cerrado en vista móvil
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -21,11 +22,11 @@ const Navbar = () => {
         </a>
       </div>
       
-      {/* Menu boton Mobile */}
+      {/* Botón del menú para vista móvil */}
       <div className="md:hidden">
         <button 
           className="text-gray-200 hover:text-white transition"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onClick={() => setIsMenuOpen(!isMenuOpen)} // Alternar el estado del menú
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
