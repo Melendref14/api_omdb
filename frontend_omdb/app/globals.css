@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Caption&display=swap');
+
+@layer utilities {
+  .custom-bg {
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #0a0f1e, #1b233a);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .custom-bg::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('./assets/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    pointer-events: none;
+  }
+}
+
+.placeholder-caption::placeholder {
+  font-family: 'Caption', sans-serif;
+}
