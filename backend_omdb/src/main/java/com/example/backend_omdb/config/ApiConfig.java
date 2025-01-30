@@ -20,7 +20,7 @@ public class ApiConfig {
      * @return Una instancia de RestTemplate.
      */
     @Bean
-    public RestTemplate restTemplate() {
+    RestTemplate restTemplate() {
         return new RestTemplate();
     }
 
