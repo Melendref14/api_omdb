@@ -1,10 +1,10 @@
 # Proyecto OMDB
 
-Este es el proyecto OMDB, que consta de un backend desarrollado con Spring Boot y un frontend desarrollado con Next.js. El proyecto está actualmente en producción y no requiere ninguna configuración adicional para su ejecución.
+Este es el proyecto OMDB, que consta de un backend desarrollado con Spring Boot y un frontend desarrollado con Next.js.
 
 ## Descripción
 
-El proyecto OMDB permite a los usuarios buscar y obtener información sobre películas. El backend se encarga de manejar las solicitudes y proporcionar los datos necesarios, mientras que el frontend presenta esta información de manera amigable para el usuario.
+El proyecto OMDB permite a los usuarios buscar y obtener información sobre películas. El backend se encarga de manejar las solicitudes y proporcionar los datos necesarios, mientras que el frontend presenta esta información para el usuario.
 
 ## Tecnologías Utilizadas
 
@@ -19,10 +19,6 @@ El backend expone los siguientes endpoints:
 
 - `GET /api/omdb/harrypotter`: Obtiene una lista de películas de Harry Potter.
 
-## Configuración de Entorno
+## Ver la Aplicación
 
-El proyecto utiliza variables de entorno para la configuración. Asegúrate de que los archivos `.env` estén correctamente configurados tanto en el backend como en el frontend.
-
-## Contribuciones
-
-Las contribuciones son bienvenidas. Por favor, abre un issue o un pull request para discutir cualquier cambio que desees realizar.
+Puedes ver la aplicación en producción en el siguiente dominio: [OMDB App](https://api-omdb-nine.vercel.app/)
