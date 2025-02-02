@@ -10,6 +10,7 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>backend_omdb</artifactId>
+	<packaging>jar</packaging>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>backend_omdb</name>
 	<description>Proyecto Backend Springboot para prueba tecnica de Tesicnor</description>
@@ -75,6 +76,11 @@
         	<artifactId>jakarta.validation-api</artifactId>
         	<version>3.0.2</version>
     	</dependency>
+		<dependency>
+		<groupId>org.springframework.cloud</groupId>
+		<artifactId>spring-cloud-gcp-starter-sql-mysql</artifactId>
+		<version>1.2.8.RELEASE</version>
+		</dependency>
 	</dependencies>
 
 	<build>
